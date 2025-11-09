@@ -11,7 +11,7 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
     display: grid;
     grid-template-rows: 15% 85%;
@@ -120,17 +120,30 @@ input.checkbox{
 }
 
 .bookIsRead{
-    padding: 20px 10px;
+    padding: 20px 50px;
     border-radius: 15px;
     background-color: var(--valid-green);
 }
 .bookIsNotRead{
-    padding: 20px 10px;
+    padding: 20px 50px;
     border-radius: 15px;
     background-color: var(--sienna);
 }
 
+.bookButtons{
+    display: flex;
+    padding: 0px 30px 0px 30px;
+}
+.deleteButton{
+    margin-left: auto;
+    padding: 2px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
 
+.bookCard>p.Pages{
+    font-size: 1.5rem;
+}
 
 
 
