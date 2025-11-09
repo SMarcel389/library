@@ -13,8 +13,6 @@ function Book(title, author, pages, read, thumbnail) {
   this.id = crypto.randomUUID(title)
 }
 
-
-
 const form = document.querySelector("#book-add")
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -40,28 +38,26 @@ function displayBooks() {
         if (Book.thumbnail) {
             bookCard.classList.add("bookWithImage")
             bookCard.style.backgroundImage = `url(${Book.thumbnail})`
-            console.log(Book.thumbnail)
         }
-        
-        
+                
         const bookTitle = document.createElement("h4");
-        bookTitle.textContent = Book.title
+            bookTitle.textContent = Book.title
 
         const bookAuthor = document.createElement("p");
-        bookAuthor.textContent = Book.author;
+            bookAuthor.textContent = Book.author;
 
         const bookPages = document.createElement("p");
-        if (Book.pages) {
-        bookPages.textContent = "Pages: " + Book.pages
-        }
-        
+            if (Book.pages) {
+                bookPages.textContent = "Pages: " + Book.pages
+            }
+
         const bookRead = document.createElement("div")
-        if (Book.read) {
-            bookRead.className = "bookIsRead"
-        }
-        else {
-            bookRead.className = "bookIsNotRead"
-        }
+            if (Book.read) {
+                bookRead.className = "bookIsRead"
+            }
+            else {
+                bookRead.className = "bookIsNotRead"
+            }
         
         bookCard.append(bookTitle, bookAuthor, bookPages, bookRead)
         shelf.append(bookCard)
